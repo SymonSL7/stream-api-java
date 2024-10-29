@@ -18,6 +18,16 @@ public class Desafio1 {
                 .sorted() // Ordena os números em ordem crescente
                 .forEach(System.out::println); // Exibe cada número no console
 
+        System.out.println("----------------------------------------------------------------------");        
+
+        // Usando Stream API para ordenar em ordem decrescente
+        List<Integer> numerosOrdenados = numeros.stream()
+                .sorted((a, b) -> b.compareTo(a)) // Ordenação decrescente
+                .toList(); // Coletando o resultado em uma lista                              
+                
+        // Exibindo a lista ordenada no console
+        System.out.println("Números em ordem decrescente: " + numerosOrdenados);
+
     }
 
 }
